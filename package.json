@@ -8,17 +8,20 @@
     "url": "https://github.com/JohnBra/vite-web-extension.git"
   },
   "scripts": {
-    "build": "vite build --config vite.config.chrome.ts",
+    "build": "npm run build:tailwind && npm run build:chrome && npm run build:firefox",
+    "build:tailwind": "tailwindcss -i src/assets/styles/tailwind.css -o src/assets/styles/tailwind-inline.css",
     "build:chrome": "vite build --config vite.config.chrome.ts",
     "build:firefox": "vite build --config vite.config.firefox.ts",
-    "dev": "nodemon --config nodemon.chrome.json",
-    "dev:chrome": "nodemon --config nodemon.chrome.json",
-    "dev:firefox": "nodemon --config nodemon.firefox.json"
+    "dev": "concurrently 'npm run dev:tailwind' 'npm run dev:chrome' 'npm run dev:firefox'",
+    "dev:tailwind": "tailwindcss -i src/assets/styles/tailwind.css -o src/assets/styles/tailwind-inline.css --watch",
+    "dev:chrome": "concurrently 'npm run dev:tailwind' 'nodemon --config nodemon.chrome.json'",
+    "dev:firefox": "concurrently 'npm run dev:tailwind' 'nodemon --config nodemon.firefox.json'"
   },
   "type": "module",
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "tailwindcss-animate": "^1.0.7",
     "webextension-polyfill": "^0.12.0"
   },
   "devDependencies": {
@@ -32,6 +35,7 @@
     "@typescript-eslint/parser": "^7.18.0",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.20",
+    "concurrently": "^9.1.2",
     "eslint": "^9.17.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.31.0",
