@@ -906,13 +906,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/chrome@npm:^0.0.287":
-  version: 0.0.287
-  resolution: "@types/chrome@npm:0.0.287"
+"@types/chrome@npm:^0.0.299":
+  version: 0.0.299
+  resolution: "@types/chrome@npm:0.0.299"
   dependencies:
     "@types/filesystem": "npm:*"
     "@types/har-format": "npm:*"
-  checksum: 10c0/3c3c3b9a1e79f0f92f2fc254971985517aba95d8bc1355cbae2309e9cb001cd961a2edde764b6b88a9189d3a496602db3329da6aad0a90aff600fca832bc88e4
+  checksum: 10c0/66a4d5368997be66b8a9f9dd8e3d7da4971ce466737eb9285486e5c2b037b770dcfbf6c0ed7148fb7f0a69bfa2c7c93d83203e6f0784e75362369ec8c1d887da
   languageName: node
   linkType: hard
 
@@ -5231,11 +5231,11 @@ __metadata:
 
 "typescript@patch:typescript@npm%3A^5.7.2#optional!builtin<compat/typescript>":
   version: 5.7.2
-  resolution: "typescript@patch:typescript@npm%3A5.7.2#optional!builtin<compat/typescript>::version=5.7.2&hash=74658d"
+  resolution: "typescript@patch:typescript@npm%3A5.7.2#optional!builtin<compat/typescript>::version=5.7.2&hash=5786d5"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10c0/c891ccf04008bc1305ba34053db951f8a4584b4a1bf2f68fd972c4a354df3dc5e62c8bfed4f6ac2d12e5b3b1c49af312c83a651048f818cd5b4949d17baacd79
+  checksum: 10c0/f3b8082c9d1d1629a215245c9087df56cb784f9fb6f27b5d55577a20e68afe2a889c040aacff6d27e35be165ecf9dca66e694c42eb9a50b3b2c451b36b5675cb
   languageName: node
   linkType: hard
 
@@ -5355,7 +5355,7 @@ __metadata:
   resolution: "vite-web-extension@workspace:."
   dependencies:
     "@crxjs/vite-plugin": "npm:^2.0.0-beta.28"
-    "@types/chrome": "npm:^0.0.287"
+    "@types/chrome": "npm:^0.0.299"
     "@types/node": "npm:^22.10.2"
     "@types/react": "npm:^19.0.1"
     "@types/react-dom": "npm:^19.0.2"
